@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The Pure Nexus Project
- * used for COSP OS
+ * used for Zirconium.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.cosp.settings;
+package com.zirconium.settings;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -29,18 +29,18 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class COSPSettings extends SettingsPreferenceFragment {
+public class ZirconiumSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.cosp_settings);
+        addPreferencesFromResource(R.xml.zirconium_settings);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COSP_SETTINGS;
+        return MetricsProto.MetricsEvent.ZIRCONIUM_SETTINGS;
     }
 
     public static void lockCurrentOrientation(Activity activity) {

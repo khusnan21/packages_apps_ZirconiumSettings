@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cosp.settings.preferences;
+package com.zirconium.settings.preferences;
 
 import android.content.Context;
 import android.content.om.IOverlayManager;

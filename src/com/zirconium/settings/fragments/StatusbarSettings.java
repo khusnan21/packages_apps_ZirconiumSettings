@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cosp.settings.fragments;
+package com.zirconium.settings.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -35,7 +35,7 @@ import android.view.ViewGroup;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
-import com.cosp.settings.R;
+import com.zirconium.settings.R;
 
 public class StatusbarSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -43,14 +43,14 @@ public class StatusbarSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.cosp_settings_statusbar);
+        addPreferencesFromResource(R.xml.zirconium_settings_statusbar);
         ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COSP_SETTINGS;
+        return MetricsProto.MetricsEvent.ZIRCONIUM_SETTINGS;
     }
 
     @Override
