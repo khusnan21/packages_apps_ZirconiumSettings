@@ -19,11 +19,25 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/zirconium_settings_title" >
 
+<PreferenceCategory
+        android:key="zirconium_category"
+        android:title="@string/zirconium_title">
+</PreferenceCategory>
+
+
         <!-- Status Bar -->
         <Preference
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:fragment="com.zirconium.settings.fragments.StatusbarSettings"
             android:icon="@drawable/ic_settings_statusbar"/>
+       
+        <!-- Lockscreen -->
+        <Preference
+            android:key="lockscreen_category"
+            android:title="@string/lockscreen_title"
+            android:fragment="com.zirconium.settings.fragments.LockscreenSettings"
+            />
+
 
 </PreferenceScreen>
