@@ -31,11 +31,20 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class ZirconiumSettings extends SettingsPreferenceFragment {
 
+    public static final String TAG = "Misc";
+    
+    private static final String KEY_DEVICE_PART = "advanced_controls";
+    private static final String KEY_DEVICE_PART_PACKAGE_NAME = "com.thht.settings.device";
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.zirconium_settings);
+            // Advanced Controls
+        if (!com.havoc.settings.preferences.Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
     }
 
     @Override
